@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#B0000000">
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF000000">
+	    
+	    <RelativeLayout
+	        android:id="@+id/search_box"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:minHeight="40dp"
+	        android:layout_margin="10dp"
+	        android:background="@drawable/bg_search">
+
+	        <ImageView
+	            android:id="@+id/popup_window_iv_search"
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:layout_margin="10dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/icon_search" />
+	        
+	        <TextView 
+	            android:id="@+id/popup_window_tv_close"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	             android:layout_margin="10dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:text="@string/fa_times_circle"
+			    android:textSize="20sp"
+			    android:textColor="#FFFFFF"
+			    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+	        <EditText
+	            android:id="@+id/popup_window_et_search"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/popup_window_iv_search"
+	            android:layout_toLeftOf="@id/popup_window_tv_close"
+	          	android:layout_centerVertical="true"
+	            android:background="#FF000000"
+	            android:textColor="#FFFFFFFF"
+	            android:hint="@string/search"
+	            android:singleLine="true"
+	            android:imeOptions="actionDone"/>
+	        
+	        
+	    </RelativeLayout>
+	    
+	    <TextView 
+	        android:id="@+id/popup_window_tv_cancel"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:gravity="center"
+	        android:layout_weight="5"
+	        android:text="@string/cancel"/>
+        
+    </LinearLayout>
+    
+    <View
+        android:id="@+id/popup_window_v_alpha" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    
+    <ListView
+        android:id="@+id/popup_window_lv" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFFFF"
+        android:visibility="gone"/>
+</LinearLayout>
+
